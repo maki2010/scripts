@@ -1,4 +1,4 @@
-@REM Jul 11 2022.
+@REM TEST11 Jul 11 2022.
 @if not "%~0"=="%~dp0.\%~nx0" start /min cmd /c,"%~dp0.\%~nx0" %* & goto :eof
 set filename=%date:~-10,4%%date:~-5,2%%date:~-2,2%
 set /p key= <"C:\CRDemo\tkn.txt" & del C:\CRDemo\tkn.txt
